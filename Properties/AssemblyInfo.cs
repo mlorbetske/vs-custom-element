@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("VSCustomElement")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("VSCustomElement")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Soner Çökmen")]
 [assembly: AssemblyProduct("VSCustomElement")]
-[assembly: AssemblyCopyright("")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("Copyright © 2016 Soner Çökmen")]
+[assembly: AssemblyTrademark("VSCustomElement")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 

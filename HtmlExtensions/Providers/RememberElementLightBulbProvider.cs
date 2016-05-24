@@ -27,43 +27,19 @@ namespace VSCustomElement.HtmlExtensions
 
         public bool HasSuggestedActions(ITextView textView, ITextBuffer textBuffer, int caretPosition, ElementNode element, AttributeNode attribute, HtmlPositionType positionType)
         {
-            if(element == null)
+            if(element == null || String.IsNullOrEmpty(element.Name) || attribute != null)
             {
                 return false;
             }
-            else if (attribute == null)
-            {
-                return HasSuggestedElementActions(textView, textBuffer, caretPosition, element, attribute, positionType);
-            }
 
-            return HasSuggestedAttributeActions(textView, textBuffer, caretPosition, element, attribute, positionType);
-        }
-
-        private bool HasSuggestedElementActions(ITextView textView, ITextBuffer textBuffer, int caretPosition, ElementNode element, AttributeNode attribute, HtmlPositionType positionType)
-        {
-            if (element != null && !String.IsNullOrEmpty(element.Name))
-            {
-                return !HTMLHelper.IsStandardHtmlElement(element.Name);
-            }
-
-            return false;
-        }
-
-        private bool HasSuggestedAttributeActions(ITextView textView, ITextBuffer textBuffer, int caretPosition, ElementNode element, AttributeNode attribute, HtmlPositionType positionType)
-        {
-            if (attribute != null && !String.IsNullOrEmpty(attribute.Name) && !HTMLHelper.IsHtmlGlobalAttribute(attribute.Name))
-            {
-                return true;
-            }
-
-            return false;
+            return !HTMLHelper.IsStandardHtmlElement(element.Name);
         }
 
         private string GetRememberElementCaption(ElementNode element)
         {
             if (element != null && !String.IsNullOrEmpty(element.Name))
             {
-                return String.Format("Remember <{0}>", element.Name.Trim().ToLower());
+                return String.Format("Remember Custom <{0}> Element", element.Name.Trim().ToLower());
             }
 
             return String.Empty;

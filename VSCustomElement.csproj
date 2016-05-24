@@ -42,10 +42,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="CommandConstants.cs" />
-    <Compile Include="HtmAttributes.Designer.cs">
+    <Compile Include="VSCustomElement.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HtmAttributes.resx</DependentUpon>
+      <DependentUpon>VSCustomElement.resx</DependentUpon>
     </Compile>
     <Compile Include="HtmlExtensions\Actions\RememberElementLightBulbAction.cs" />
     <Compile Include="HtmlExtensions\Providers\RememberElementLightBulbProvider.cs" />
@@ -125,9 +125,9 @@
     <Content Include="VSCustomElement.vsct" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="HtmAttributes.resx">
+    <EmbeddedResource Include="VSCustomElement.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>HtmAttributes.Designer.cs</LastGenOutput>
+      <LastGenOutput>VSCustomElement.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

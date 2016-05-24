@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="_a" xml:space="preserve">
+    <value>charset,coords,download,href,hreflang,media,name,rel,rev,shape,target,type</value>
+  </data>
+  <data name="_abbr" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_acronym" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_address" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_applet" xml:space="preserve">
+    <value>code,object,align,alt,archive,codebase,height,hspace,name,vspace,width</value>
+  </data>
+  <data name="_area" xml:space="preserve">
+    <value>alt,coords,download,href,hreflang,media,nohref,rel,shape,target,type</value>
+  </data>
+  <data name="_article" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_aside" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_audio" xml:space="preserve">
+    <value>autoplay,controls,loop,muted,preload,src</value>
+  </data>
+  <data name="_b" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_base" xml:space="preserve">
+    <value>href,target</value>
+  </data>
+  <data name="_basefont" xml:space="preserve">
+    <value>color,face,size</value>
+  </data>
+  <data name="_bdi" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_bdo" xml:space="preserve">
+    <value>dir</value>
+  </data>
+  <data name="_big" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_blockquote" xml:space="preserve">
+    <value>cite</value>
+  </data>
+  <data name="_body" xml:space="preserve">
+    <value>alink,background,bgcolor,link,text,vlink</value>
+  </data>
+  <data name="_br" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_button" xml:space="preserve">
+    <value>autofocus, disabled,form,formaction,formenctype,formmethod,formtarget,name,type,value</value>
+  </data>
+  <data name="_canvas" xml:space="preserve">
+    <value>height,width</value>
+  </data>
+  <data name="_caption" xml:space="preserve">
+    <value>align</value>
+  </data>
+  <data name="_center" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_cite" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_code" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_col" xml:space="preserve">
+    <value>align,char,charoff,span,valign,width</value>
+  </data>
+  <data name="_colgroup" xml:space="preserve">
+    <value>align,char,charoff,span,valign,width</value>
+  </data>
+  <data name="_datalist" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_dd" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_del" xml:space="preserve">
+    <value>cite,datetime</value>
+  </data>
+  <data name="_details" xml:space="preserve">
+    <value>open</value>
+  </data>
+  <data name="_dfn" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_dialog" xml:space="preserve">
+    <value>open</value>
+  </data>
+  <data name="_dir" xml:space="preserve">
+    <value>compact</value>
+  </data>
+  <data name="_div" xml:space="preserve">
+    <value>align</value>
+  </data>
+  <data name="_dl" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_dt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_em" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_embed" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_fieldset" xml:space="preserve">
+    <value>hright,src,type,width</value>
+  </data>
+  <data name="_figcaption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_figure" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_font" xml:space="preserve">
+    <value>color,face,size</value>
+  </data>
+  <data name="_footer" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_form" xml:space="preserve">
+    <value>accept,accept-charset,action,autocomplete,enctype,method,name,novalidate,target</value>
+  </data>
+  <data name="_frame" xml:space="preserve">
+    <value>frameborder,longdesc,marginheight,marginwidthiname,noresize,scrolling,src</value>
+  </data>
+  <data name="_frameset" xml:space="preserve">
+    <value>cols,rows</value>
+  </data>
+  <data name="_h1" xml:space="preserve">
+    <value>align</value>
+  </data>
+  <data name="_h2" xml:space="preserve">
+    <value>align</value>
+  </data>
+  <data name="_h3" xml:space="preserve">
+    <value>align</value>
+  </data>
+  <data name="_h4" xml:space="preserve">
+    <value>align</value>
+  </data>
+  <data name="_h5" xml:space="preserve">
+    <value>align</value>
+  </data>
+  <data name="_h6" xml:space="preserve">
+    <value>align</value>
+  </data>
+  <data name="_head" xml:space="preserve">
+    <value>profile</value>
+  </data>
+  <data name="_header" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_hr" xml:space="preserve">
+    <value>align,noshade,size,width</value>
+  </data>
+  <data name="_html" xml:space="preserve">
+    <value>manifest,xmlns</value>
+  </data>
+  <data name="_i" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_iframe" xml:space="preserve">
+    <value>align,frameborder,height,longdesc,marginheight,marginwidth,name,sandbox,scrolling,src,srcdoc,width</value>
+  </data>
+  <data name="_img" xml:space="preserve">
+    <value>align,alt,border,crossorigin,height,hspace,ismap,longdesc,src,usemap,vspace,width</value>
+  </data>
+  <data name="_input" xml:space="preserve">
+    <value>accept,align,alt,autocomplete,autofocus,checked,dirname,disabled,form,formaction,formenctype,formmethod,formnovalidate,formtarget,height,list,max,maxlength,min,multiple,name,pattern,placeholder,readonly,required,size,src,step,type,value,width</value>
+  </data>
+  <data name="_ins" xml:space="preserve">
+    <value>cite,datetime</value>
+  </data>
+  <data name="_kbd" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_keygen" xml:space="preserve">
+    <value>autofocus,challange,disabled,form,keytype,name</value>
+  </data>
+  <data name="_label" xml:space="preserve">
+    <value>for,form</value>
+  </data>
+  <data name="_legend" xml:space="preserve">
+    <value>align</value>
+  </data>
+  <data name="_li" xml:space="preserve">
+    <value>type,value</value>
+  </data>
+  <data name="_link" xml:space="preserve">
+    <value>charset,crossorigin,href,media,rel,rev,sizes,target,type</value>
+  </data>
+  <data name="_main" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_map" xml:space="preserve">
+    <value>name</value>
+  </data>
+  <data name="_mark" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_menu" xml:space="preserve">
+    <value>label,type</value>
+  </data>
+  <data name="_menuitem" xml:space="preserve">
+    <value>checked,command,default,disabled,icon,label,radiogroup,type</value>
+  </data>
+  <data name="_meta" xml:space="preserve">
+    <value>charset,content,http-equiv,name,scheme</value>
+  </data>
+  <data name="_meter" xml:space="preserve">
+    <value>form,high,low,max,min,optimum,value</value>
+  </data>
+  <data name="_nav" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_noframes" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_noscript" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_object" xml:space="preserve">
+    <value>align,archive,border,classid,codebase,data,declare,form,height,hspace,name,standby,type,usemap,vspace,width</value>
+  </data>
+  <data name="_ol" xml:space="preserve">
+    <value>compact,reversed,start,type</value>
+  </data>
+  <data name="_optgroup" xml:space="preserve">
+    <value>disabled,label</value>
+  </data>
+  <data name="_option" xml:space="preserve">
+    <value>disabled,label,selected,value</value>
+  </data>
+  <data name="_output" xml:space="preserve">
+    <value>for,form,name</value>
+  </data>
+  <data name="_p" xml:space="preserve">
+    <value>align</value>
+  </data>
+  <data name="_param" xml:space="preserve">
+    <value>name,type,value,valuetype</value>
+  </data>
+  <data name="_pre" xml:space="preserve">
+    <value>width</value>
+  </data>
+  <data name="_progress" xml:space="preserve">
+    <value>max,value</value>
+  </data>
+  <data name="_q" xml:space="preserve">
+    <value>cite</value>
+  </data>
+  <data name="_rp" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_rt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_ruby" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_s" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_samp" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_script" xml:space="preserve">
+    <value>async,charset,defer,src,type,xml:space</value>
+  </data>
+  <data name="_section" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_select" xml:space="preserve">
+    <value>autofocus,disabled,form,multiple,name,required,size</value>
+  </data>
+  <data name="_small" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_source" xml:space="preserve">
+    <value>media,src,type</value>
+  </data>
+  <data name="_span" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_strike" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_strong" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_style" xml:space="preserve">
+    <value>media,scoped,type</value>
+  </data>
+  <data name="_sub" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_summary" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_sup" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_table" xml:space="preserve">
+    <value>align,bgcolor,border,cellpadding,cellspacing,frame,rules,sortable,summary,width</value>
+  </data>
+  <data name="_tbody" xml:space="preserve">
+    <value>align,char,charoff,valign</value>
+  </data>
+  <data name="_td" xml:space="preserve">
+    <value>abbr,align,axis,bgcolor,char,charoff,colspan,headers,height,nowrap,rowspan,scope,valign,width</value>
+  </data>
+  <data name="_textarea" xml:space="preserve">
+    <value>autofocus,cols,dirname,disabled,form,maxlength,name,placeholder,readonly,required,rows,wrap</value>
+  </data>
+  <data name="_tfoot" xml:space="preserve">
+    <value>align,char,charoff,valign</value>
+  </data>
+  <data name="_th" xml:space="preserve">
+    <value>abbr,align,axis,bgcolor,char,charoff,colspan,headers,height,nowrap,rowspan,scope,valign,width,sorted</value>
+  </data>
+  <data name="_thead" xml:space="preserve">
+    <value>align,char,charoff,valign</value>
+  </data>
+  <data name="_time" xml:space="preserve">
+    <value>datetime</value>
+  </data>
+  <data name="_title" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_tr" xml:space="preserve">
+    <value>align,char,charoff,valign,bgcolor</value>
+  </data>
+  <data name="_track" xml:space="preserve">
+    <value>default,kind,label,src,srclang</value>
+  </data>
+  <data name="_tt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_u" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_ul" xml:space="preserve">
+    <value>compact,type</value>
+  </data>
+  <data name="_var" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_video" xml:space="preserve">
+    <value>autoplay,controls,height,loop,muted,poster,preload,src,width</value>
+  </data>
+  <data name="_wbr" xml:space="preserve">
+    <value />
+  </data>
+</root>

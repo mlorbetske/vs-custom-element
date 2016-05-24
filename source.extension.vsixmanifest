@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" ?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="VSCustomElement.SCOKMEN.7b31dfbe-0f92-4fd0-8185-83a2a2233273" Version="0.0.1" Language="en-US" Publisher="Soner ÇÖKMEN" />
+    <Identity Id="a54fa8d8-29c0-450a-9879-1ca346eb944f" Version="0.0.1" Language="en-US" Publisher="Soner ÇÖKMEN" />
     <DisplayName>VSCustomElement</DisplayName>
     <Description xml:space="preserve">VSIX extension for suppliying html intellisense for custom html element and attributes.</Description>
     <Tags>html,element,attribute,intellisense</Tags>
@@ -12,4 +12,8 @@
   <Dependencies>
     <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
   </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" />
+  </Assets>
 </PackageManifest>

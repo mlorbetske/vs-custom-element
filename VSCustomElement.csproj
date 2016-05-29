@@ -42,14 +42,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="CommandConstants.cs" />
+    <Compile Include="HtmlExtensions\Actions\RememberGlobalAttributeLightBulbAction.cs" />
+    <Compile Include="HtmlExtensions\Providers\BaseHtmlLightBulbProvider.cs" />
+    <Compile Include="HtmlExtensions\Providers\RememberElementLightBulbProvider.cs" />
     <Compile Include="VSCustomElement.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>VSCustomElement.resx</DependentUpon>
     </Compile>
     <Compile Include="HtmlExtensions\Actions\RememberElementLightBulbAction.cs" />
-    <Compile Include="HtmlExtensions\Providers\RememberElementLightBulbProvider.cs" />
-    <Compile Include="Helpers\HTMLHelper.cs" />
+    <Compile Include="HtmlExtensions\Providers\RememberGlobalAttributeLightBulbProvider.cs" />
+    <Compile Include="Helpers\IntellisenseHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VSCustomElementPackage.cs" />
   </ItemGroup>
@@ -116,6 +119,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assemblies\Microsoft.Html.Core.dll" />

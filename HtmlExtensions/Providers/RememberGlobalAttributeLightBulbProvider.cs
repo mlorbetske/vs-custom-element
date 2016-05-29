@@ -15,26 +15,26 @@ namespace VSCustomElement.HtmlExtensions
 {
     [Export(typeof(IHtmlSuggestedActionProvider))]
     [ContentType(HtmlContentTypeDefinition.HtmlContentType)]
-    [Name("Html Remember Element Light Bulb Provider")]
-    class RememberElementLightBulbProvider : BaseHtmlLightBulbProvider, IHtmlSuggestedActionProvider
+    [Name("Html Remember Global Attribute Light Bulb Provider")]
+    class RememberGlobalAttributeLightBulbProvider : BaseHtmlLightBulbProvider, IHtmlSuggestedActionProvider
     {
         public IEnumerable<ISuggestedAction> GetSuggestedActions(ITextView textView, ITextBuffer textBuffer, int caretPosition, ElementNode element, AttributeNode attribute, HtmlPositionType positionType)
         {
             return new ISuggestedAction[] {
-                new RememberElementLightBulbAction(textView, textBuffer, element, attribute, GetCaption(element, attribute))
+                new RememberGlobalAttributeLightBulbAction(textView, textBuffer, element, attribute, GetCaption(element, attribute))
             };
         }
 
         public bool HasSuggestedActions(ITextView textView, ITextBuffer textBuffer, int caretPosition, ElementNode element, AttributeNode attribute, HtmlPositionType positionType)
         {
-            return this.IsTargetHtmlElement(element, attribute) && !IntellisenseHelper.IsKnownHtmlElement(element.Name);
+            return this.IsTargetHtmlAttribute(element, attribute) && !IntellisenseHelper.IsKnownHtmlAttribute(attribute.Name);
         }
 
         protected override string GetCaption(ElementNode element, AttributeNode attribute)
         {
-            if (element != null && !String.IsNullOrEmpty(element.Name))
+            if (attribute != null && !String.IsNullOrEmpty(attribute.Name))
             {
-                return String.Format("Remember Custom <{0}> Element", element.Name.Trim().ToLower());
+                return String.Format("Remember Custom <{0}> Element As Global", attribute.Name.Trim().ToLower());
             }
 
             return String.Empty;

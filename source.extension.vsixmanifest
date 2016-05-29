@@ -4,6 +4,7 @@
     <Identity Id="a54fa8d8-29c0-450a-9879-1ca346eb944f" Version="0.0.1" Language="en-US" Publisher="Soner ÇÖKMEN" />
     <DisplayName>VSCustomElement</DisplayName>
     <Description xml:space="preserve">VSIX extension for suppliying html intellisense for custom html element and attributes.</Description>
+    <MoreInfo>https://github.com/scokmen/vs-custom-element</MoreInfo>
     <Tags>html,element,attribute,intellisense</Tags>
   </Metadata>
   <Installation>

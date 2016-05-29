@@ -1,14 +1,19 @@
 ﻿using Microsoft.Html.Core.Tree.Nodes;
-using Microsoft.Html.Editor.SuggestedActions;
 using Microsoft.VisualStudio.Text;
-using System;
 using System.Threading;
 using Microsoft.VisualStudio.Text.Editor;
 
 namespace VSCustomElement.HtmlExtensions
 {
-    internal class RememberElementLightBulbAction : HtmlSuggestedActionBase
+    /// <summary>
+    /// Remember element light bulb action.
+    /// Respobsible for registering new custom html elements to VSCustomElement extension.
+    /// </summary>
+    internal class RememberElementLightBulbAction : BaseHtmlLightBulbAction
     {
+        public RememberElementLightBulbAction():
+            this(null, null, null, null, null) { }
+
         public RememberElementLightBulbAction(ITextView textView, ITextBuffer textBuffer, ElementNode element, AttributeNode attribute, string caption)
             : base(textView, textBuffer, element, attribute, caption)
         {

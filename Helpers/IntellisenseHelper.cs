@@ -3,24 +3,34 @@ using System.Collections.Generic;
 
 namespace VSCustomElement.Helpers
 {
+    /// <summary>
+    /// Intellisense helper utilities.
+    /// </summary>
     public static class IntellisenseHelper
     {
         private static HashSet<string> standardHtmlElements;
         private static HashSet<string> standardHtmlAttributes;
         private static HashSet<string> customHtmlElements;
         private static HashSet<string> customHtmlGlobalAttributes;
+        private static Dictionary<string, HashSet<string>> attributesOfCustomHtmlElements;
 
+        /// <summary>
+        /// Initialize the static IntellisenseHelper instance.
+        /// </summary>
         static IntellisenseHelper()
         {
             var standardHtmlElements = VSCustomElement.StandardHtmlElements.Split(',');
             var standardHtmlAttributes = VSCustomElement.StandardHtmlAttributes.Split(',');
             var customHtmlElements = new String[] { };
-            var customHtmlGlobalAttributes = new String[] { };
+            var customHtmlGlobalAttributes = new String[] {"global" };
 
             IntellisenseHelper.standardHtmlElements = new HashSet<string>(standardHtmlElements);
             IntellisenseHelper.standardHtmlAttributes = new HashSet<string>(standardHtmlAttributes);
             IntellisenseHelper.customHtmlElements = new HashSet<string>(customHtmlElements);
-            IntellisenseHelper.customHtmlGlobalAttributes = new HashSet<string>();
+            IntellisenseHelper.customHtmlGlobalAttributes = new HashSet<string>(customHtmlGlobalAttributes);
+            IntellisenseHelper.attributesOfCustomHtmlElements = new Dictionary<string, HashSet<string>>();
+
+            IntellisenseHelper.attributesOfCustomHtmlElements["div"] = new HashSet<string>(new String[] {"div-at"});
         }
 
         /// <summary>
@@ -30,12 +40,7 @@ namespace VSCustomElement.Helpers
         /// <returns>Result</returns>
         public static bool IsStandardHtmlElement(string elementName)
         {
-            if (String.IsNullOrEmpty(elementName))
-            {
-                return false;
-            }
-
-            return IntellisenseHelper.standardHtmlElements.Contains(elementName.Trim().ToLower());
+            return IntellisenseHelper.standardHtmlElements.Contains(HtmlHelper.Htmlize(elementName));
         }
 
         /// <summary>
@@ -45,12 +50,7 @@ namespace VSCustomElement.Helpers
         /// <returns>Result</returns>
         public static bool IsCustomHtmlElement(string elementName)
         {
-            if(String.IsNullOrEmpty(elementName))
-            {
-                return false;
-            }
-
-            return IntellisenseHelper.customHtmlElements.Contains(elementName.Trim().ToLower());
+            return IntellisenseHelper.customHtmlElements.Contains(HtmlHelper.Htmlize(elementName));
         }
 
         /// <summary>
@@ -71,12 +71,7 @@ namespace VSCustomElement.Helpers
         /// <returns>Result</returns>
         public static bool IsStandardHtmlAttribute(string attributeName)
         {
-            if (String.IsNullOrEmpty(attributeName))
-            {
-                return false;
-            }
-
-            var trimmedAttributeName = attributeName.Trim().ToLower();
+            var trimmedAttributeName = HtmlHelper.Htmlize(attributeName);
 
             return trimmedAttributeName.StartsWith("data-") || IntellisenseHelper.standardHtmlAttributes.Contains(trimmedAttributeName);
         }
@@ -88,12 +83,7 @@ namespace VSCustomElement.Helpers
         /// <returns>Result</returns>
         public static bool IsCustomHtmlGlobalAttribute(string attributeName)
         {
-            if (String.IsNullOrEmpty(attributeName))
-            {
-                return false;
-            }
-
-            return IntellisenseHelper.customHtmlGlobalAttributes.Contains(attributeName.Trim().ToLower());
+            return IntellisenseHelper.customHtmlGlobalAttributes.Contains(HtmlHelper.Htmlize(attributeName));
         }
 
         /// <summary>
@@ -105,6 +95,34 @@ namespace VSCustomElement.Helpers
         {
             return IsStandardHtmlAttribute(attributeName) ||
                    IsCustomHtmlGlobalAttribute(attributeName); 
+        }
+
+        /// <summary>
+        /// Is attribute is known by VSCustomElement extension for given custom html element?
+        /// </summary>
+        /// <param name="elementName">Name of the element</param>
+        /// <param name="attributeName">Name of the attribute</param>
+        /// <returns>Result</returns>
+        public static bool IsAttributeOfCustomHtmlElement(string elementName, string attributeName)
+        {
+            var trimmedElementName = HtmlHelper.Htmlize(elementName);
+            var trimmedAttributeName = HtmlHelper.Htmlize(attributeName);
+
+            if (IntellisenseHelper.attributesOfCustomHtmlElements.ContainsKey(trimmedElementName))
+            {
+                var attributesOfElement = IntellisenseHelper.attributesOfCustomHtmlElements[trimmedElementName];
+
+                if(attributesOfElement != null)
+                {
+                    return attributesOfElement.Contains(trimmedAttributeName);
+                }
+
+                IntellisenseHelper.attributesOfCustomHtmlElements[trimmedElementName] = new HashSet<string>();
+
+                return false;
+            }
+
+            return false;
         }
     }
 }

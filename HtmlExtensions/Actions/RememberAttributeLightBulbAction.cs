@@ -6,15 +6,15 @@ using Microsoft.VisualStudio.Text.Editor;
 namespace VSCustomElement.HtmlExtensions
 {
     /// <summary>
-    /// Remember global attribute light bulb action.
-    /// Respobsible for registering new custom global html attributes to VSCustomElement extension.
+    /// Remember attribute light bulb action.
+    /// Respobsible for registering new custom html attributes for custom element to VSCustomElement extension.
     /// </summary>
-    internal class RememberGlobalAttributeLightBulbAction : BaseHtmlLightBulbAction
+    internal class RememberAttributeLightBulbAction : BaseHtmlLightBulbAction
     {
-        public RememberGlobalAttributeLightBulbAction():
+        public RememberAttributeLightBulbAction():
             this(null, null, null, null, null) { }
 
-        public RememberGlobalAttributeLightBulbAction(ITextView textView, ITextBuffer textBuffer, ElementNode element, AttributeNode attribute, string caption)
+        public RememberAttributeLightBulbAction(ITextView textView, ITextBuffer textBuffer, ElementNode element, AttributeNode attribute, string caption)
             : base(textView, textBuffer, element, attribute, caption)
         {
 

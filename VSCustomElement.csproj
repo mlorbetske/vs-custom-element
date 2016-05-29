@@ -42,8 +42,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="CommandConstants.cs" />
+    <Compile Include="Helpers\HtmlHelper.cs" />
+    <Compile Include="HtmlExtensions\Actions\BaseHtmlLightBulbAction.cs" />
+    <Compile Include="HtmlExtensions\Actions\RememberAttributeLightBulbAction.cs" />
     <Compile Include="HtmlExtensions\Actions\RememberGlobalAttributeLightBulbAction.cs" />
     <Compile Include="HtmlExtensions\Providers\BaseHtmlLightBulbProvider.cs" />
+    <Compile Include="HtmlExtensions\Providers\RememberAttributeLightBulbProvider.cs" />
     <Compile Include="HtmlExtensions\Providers\RememberElementLightBulbProvider.cs" />
     <Compile Include="VSCustomElement.Designer.cs">
       <AutoGen>True</AutoGen>

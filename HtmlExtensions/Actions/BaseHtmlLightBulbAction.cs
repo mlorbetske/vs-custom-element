@@ -1,5 +1,4 @@
 ﻿using Microsoft.Html.Core.Tree.Nodes;
-using Microsoft.Html.Editor.SuggestedActions;
 using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Editor;
 

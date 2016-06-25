@@ -44,8 +44,10 @@
     <Compile Include="CommandConstants.cs" />
     <Compile Include="Helpers\HtmlHelper.cs" />
     <Compile Include="HtmlExtensions\Actions\BaseHtmlLightBulbAction.cs" />
+    <Compile Include="HtmlExtensions\Actions\HtmlSuggestedActionBase.cs" />
     <Compile Include="HtmlExtensions\Actions\RememberAttributeLightBulbAction.cs" />
     <Compile Include="HtmlExtensions\Actions\RememberGlobalAttributeLightBulbAction.cs" />
+    <Compile Include="HtmlExtensions\Actions\SuggestedActionBase.cs" />
     <Compile Include="HtmlExtensions\Providers\BaseHtmlLightBulbProvider.cs" />
     <Compile Include="HtmlExtensions\Providers\RememberAttributeLightBulbProvider.cs" />
     <Compile Include="HtmlExtensions\Providers\RememberElementLightBulbProvider.cs" />
@@ -61,6 +63,7 @@
     <Compile Include="VSCustomElementPackage.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
@@ -90,6 +93,11 @@
     <Reference Include="Microsoft.VisualStudio.Editor, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Program Files\Microsoft Visual Studio 14.0\VSSDK\VisualStudioIntegration\Common\Assemblies\v4.0\Microsoft.VisualStudio.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>packages\Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.14.0.23205\lib\Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Language.Intellisense, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
